@@ -1,0 +1,15 @@
+version: '2.3'
+services:
+   master:
+      image: rnowotniak/saltlab
+      container_name: salt1
+      hostname: salt1
+      command: ["bash", "/root/run.sh", "master"]
+   minion:
+      image: rnowotniak/saltlab
+      command: ["bash", "/root/run.sh", "minion"]
+      depends_on:
+         - master
+      scale: 3
+      hostname: minion
+
