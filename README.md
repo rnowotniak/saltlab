@@ -20,6 +20,7 @@ Contact: Robert Nowotniak <rnowotniak@gmail.com>
     salt '*' test.ping
     
 Change number of minions dynamically:
+
     docker-compose up --scale minions=6
 
 
