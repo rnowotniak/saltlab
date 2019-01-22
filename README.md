@@ -1,34 +1,40 @@
 # saltlab
 Personal Saltstack lab environment in Docker (Centos7 containers)
+Contact: Robert Nowotniak <rnowotniak@gmail.com>
 
 
-Quick start
+## Quick start
 
-docker pull rnowotniak/saltlab
-git clone https://github.com/rnowotniak/saltlab
+    git clone https://github.com/rnowotniak/saltlab
+    docker pull rnowotniak/saltlab
+    cd saltlab
 
-docker-compose up
+    docker-compose up
 
-docker exec -it salt1 bash -l
-salt-key
-salt-key -A -y
 
-salt '*' test.ping
 
-docker-compose up --scale minions=6
-
+    docker exec -it salt1 bash -l
+    salt-key
+    salt-key -A -y
+    
+    salt '*' test.ping
+    
+Change number of minions dynamically:
+    docker-compose up --scale minions=6
 
 
 ----------
 
+
+## Some useful links:
+
+* https://docs.saltstack.com/en/latest/topics/installation/rhel.html
+* https://docs.docker.com/compose/gettingstarted/
+* https://docs.docker.com/engine/reference/run/
+* https://docs.docker.com/compose/django/
+
 docker pull centos:centos7
 docker run -it --rm centos:centos7
-
-https://docs.saltstack.com/en/latest/topics/installation/rhel.html
-https://docs.docker.com/compose/gettingstarted/
-https://docs.docker.com/engine/reference/run/
-https://docs.docker.com/compose/django/
-
 
 salt yum.repo
 
