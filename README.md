@@ -7,16 +7,19 @@ Contact: Robert Nowotniak <rnowotniak@gmail.com>
 
     git clone https://github.com/rnowotniak/saltlab
     docker pull rnowotniak/saltlab
-    cd saltlab
 
+    cd saltlab
     docker-compose up
 
 
+Enter the Salt master container, accept all minions keys:
 
     docker exec -it salt1 bash -l
     salt-key
     salt-key -A -y
-    
+
+![docker-compuse up output](img/docker-compose-up.png)
+
     salt '*' test.ping
     
 Change number of minions dynamically:
