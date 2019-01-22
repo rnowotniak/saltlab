@@ -9,7 +9,8 @@ if [ "$1" = master ]; then
 	/usr/bin/salt-master -l info
 else
 	echo Starting minion
-	echo "master: salt1" >> /etc/salt/minion
+	grep '^\s*master\s*:' /etc/salt/master \
+		|| echo "master: salt1" >> /etc/salt/minion
 	/usr/bin/salt-minion -l info
 fi
 
