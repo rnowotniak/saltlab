@@ -1,6 +1,9 @@
 # saltlab
 Personal Saltstack lab environment in Docker (Centos7 containers)
+
 Contact: Robert Nowotniak <rnowotniak@gmail.com>
+
+Tested on ArchLinux as the Docker host.
 
 
 ## Quick start
